@@ -1,13 +1,13 @@
 import React from 'react'
 
-const sidebar = () => {
+const sidebar = ({show}) => {
   return (
 <sidebar>
-  
-  <div className='flex'>
+  {
+    show? <div className='sm:flex'>
           {/* sidebar */}
-          <div className='flex gap-6'>
-            <section className='flex pl-4 mt-4 flex-col w-[300px] shadow-xl h-[300px]'>
+          <div className='flex-col  sm:flex gap-6 w-[180px] sm:w-[300px]'>
+            <section className='flex pl-4 mt-4 flex-col w-[180px] sm:w-[300px] shadow-xl h-[300px]'>
               <h1 className='font-semibold text-2xl'>DASHBOARD</h1>
               {/* <h1 className=' '>DASHBOARD</h1> */}
               <select name="" id="" className='w-[100px] pl-6'>
@@ -21,7 +21,8 @@ const sidebar = () => {
               </section>
             </section>
           </div>
-        </div>
+        </div> :""
+  }
   </sidebar>
   )
 }
